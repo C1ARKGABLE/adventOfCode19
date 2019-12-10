@@ -18,6 +18,10 @@ class IntCode:
         self.ptr = start_ptr
         self.op_code_len = op_code_len
         self.instr_len = instr_len
+
+        self.ops = {1:self.add_func, 2:self.mul_func
+        }
+
         self.op_regs_count = {1: 3, 2: 3, 3: 1, 4: 1, 5: 3, 6: 3, 7: 3, 8: 3, 99: 0}
 
     def inputQueue(self, inp):
